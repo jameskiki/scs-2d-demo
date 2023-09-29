@@ -371,6 +371,7 @@ void Demo::moveBefore(DemoObject *a, DemoObject *b) {
         }
     }
 
+    // checks
     if (i_a <= i_b) return;
     else if (m_objects[i_a] != a) return;
     else if (m_objects[i_b] != b) return;

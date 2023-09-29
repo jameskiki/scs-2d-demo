@@ -10,6 +10,7 @@
 #include "../include/spring_double_pendulum_demo.h"
 #include "../include/triple_pendulum_demo.h"
 #include "../include/complex_roller_demo.h"
+#include "../include/my_demo.h"
 
 #include <cmath>
 #include <sstream>
@@ -111,8 +112,9 @@ void DemoApplication::initialize(void *instance, ysContextObject::DeviceAPI api)
     m_blobBackground = m_assetManager.GetModelAsset("Blob_shadow");
     m_blobFace = m_assetManager.GetModelAsset("Blob_face");
 
-    m_activeDemo = 6;
+    m_activeDemo = 0;
 
+    addDemo(new MyDemo);
     addDemo(new SpringDoublePendulumDemo);
     addDemo(new BlobGameDemo);
     addDemo(new SpringMassDemo);
